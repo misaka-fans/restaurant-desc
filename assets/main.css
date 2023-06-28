@@ -1,0 +1,108 @@
+:root {
+  --theme-color: #ec9513; 
+  --text-main: #eee;
+  --cover-color: #d1d1d1;
+}
+* {
+  color: var(--text-main);
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Background */
+.bg {
+    background-color: var(--cover-color);
+    background: url(../assets/background.webp) no-repeat;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -114514;
+    position: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+.bg::after {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    z-index: -1;
+    position: fixed;
+    background-color: rgba(94, 94, 94, 0.6);
+}
+
+/* Google material symbols */
+/* fallback */
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: url(symbols.woff2) format('woff2');
+}
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+/* Custom Css */
+.container {
+  text-align: center;
+}
+.sticky {
+  position: sticky;
+  top: 0px;
+}
+.feature-desc-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+.feature-desc-item {
+  padding: 10px;
+  flex: 0 0 50%;
+  border-radius: 6px;
+}
+.feature-desc-item:hover {
+  opacity: 0.5;
+  transition: .7s;
+  -o-transition: .7s;
+  -moz-transition: .7s;
+  -webkit-transition: .7s;
+}
+footer {
+  background: var(--theme-color);
+  padding: 10px;
+  font-size: small;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  text-align: center;
+  opacity: 0.6;
+}
