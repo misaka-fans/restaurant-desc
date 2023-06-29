@@ -31,7 +31,21 @@
       </nav>
     </div>
     <div class="container mt-3">
-      留言板嵌入
+      <!-- CSS -->
+      <link href="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.css" rel="stylesheet">
+      <!-- JS -->
+      <script src="https://cdn.bootcdn.net/ajax/libs/artalk/2.5.5/Artalk.js"></script>
+      <!-- Artalk -->
+      <div id="Comments"></div>
+      <script>
+        Artalk.init({
+          el:        '#Comments',                // 绑定元素的 Selector
+          pageKey:   '/post/1',                  // 固定链接 (留空自动获取)
+          pageTitle: '在这里留言获取酒店信息',  // 页面标题 (留空自动获取)
+          server:    'http://comment.misaka-fans.space:8080',  // 后端地址
+          site:      '酒店保洁工作咨询联系',             // 你的站点名
+        })
+      </script>
     </div>
     <footer>
       <p>&copy;2023 xxx</p>
